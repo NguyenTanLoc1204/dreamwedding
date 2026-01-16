@@ -1,0 +1,26 @@
+.story-hero {
+  background: var(--champagne);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--soft-pink);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+}

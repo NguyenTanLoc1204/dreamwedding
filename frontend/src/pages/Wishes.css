@@ -1,0 +1,259 @@
+
+/* Wishes Hero */
+.wishes-hero {
+  background: var(--champagne);
+  position: relative;
+}
+
+.wishes-count {
+  font-size: 1.2rem;
+  color: var(--slate);
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+.wishes-count strong {
+  color: var(--primary-rose);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Filters */
+.wishes-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.wishes-filters .filter-btn {
+  padding: 10px 25px;
+  border: 2px solid var(--primary-rose);
+  background: white;
+  color: var(--primary-rose);
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.wishes-filters .filter-btn:hover,
+.wishes-filters .filter-btn.active {
+  background: var(--primary-rose);
+  color: white;
+}
+
+/* Wishes Grid */
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.wish-card {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+  border: 1px solid var(--mist);
+}
+
+.wish-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--soft-pink);
+}
+
+/* Wish Header */
+.wish-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--mist);
+}
+
+.wish-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-rose);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-subtle);
+}
+
+.wish-info {
+  flex: 1;
+}
+
+.wish-name {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--charcoal);
+  font-weight: 600;
+}
+
+.wish-date {
+  font-size: 0.85rem;
+  color: var(--silver);
+  font-weight: 500;
+}
+
+/* Wish Content */
+.wish-content {
+  position: relative;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.quote-icon {
+  font-size: 2.5rem;
+  color: var(--blush);
+  font-family: Georgia, serif;
+  line-height: 1;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.quote-icon:first-child {
+  top: -10px;
+  left: -5px;
+}
+
+.quote-icon.closing {
+  bottom: -10px;
+  right: -5px;
+}
+
+.wish-message {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--slate);
+  font-style: italic;
+  padding: 0 15px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Wish Footer */
+.wish-footer {
+  padding-top: 20px;
+  border-top: 2px solid var(--mist);
+}
+
+.wish-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wish-contact span {
+  font-size: 0.9rem;
+  color: var(--silver);
+  font-weight: 500;
+}
+
+/* No Wishes */
+.no-wishes {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.no-wishes p {
+  font-size: 1.3rem;
+  color: var(--slate);
+  margin-bottom: 30px;
+}
+
+/* Floating Action Button */
+.fab-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-rose);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition);
+  z-index: 100;
+  cursor: pointer;
+  border: 3px solid white;
+}
+
+.fab-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-strong);
+  background: var(--charcoal);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wishes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wish-card {
+    padding: 25px 20px;
+  }
+
+  .wish-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .wish-name {
+    font-size: 1.1rem;
+  }
+
+  .wish-message {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .quote-icon {
+    font-size: 2rem;
+  }
+
+  .fab-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
