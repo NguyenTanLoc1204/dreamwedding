@@ -3,19 +3,19 @@ import './Wedding.css'
 export default function Wedding() {
   const weddingInfo = {
     ceremony: {
-      title: 'Lễ Cưới',
-      date: '31/12/2025',
-      time: '14:00',
-      venue: 'Khách sạn Sofitel Saigon Plaza',
-      address: '17 Lê Duẩn, Quận 1, TP. Hồ Chí Minh',
-      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4956932043684!2d106.69745731533391!3d10.776889062180447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4b3330bcc1%3A0xb3ff69197b10ec4f!2sSofitel%20Saigon%20Plaza!5e0!3m2!1sen!2s!4v1234567890'
+      title: 'Lễ Đính Hôn',
+      date: '17/01/2026',
+      time: '9:00',
+      venue: 'Tại gia',
+      address: '1051 Hùng Vương, Quy Nhơn Bắc, Gia Lai',
+      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.280542630509!2d108.5875447!3d15.4531394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3169c5000ec26bbf%3A0x5014de4179b24a2f!2zTmjDoCB24INuIGjDs2EgdGjDtG4gQsOsbmggQW4!5e0!3m2!1svi!2s!4v1737350000000'
     },
     reception: {
-      title: 'Tiệc Cưới',
-      date: '31/12/2025',
-      time: '18:00',
-      venue: 'Khách sạn Sofitel Saigon Plaza',
-      address: '17 Lê Duẩn, Quận 1, TP. Hồ Chí Minh'
+      title: 'Lễ Cưới',
+      date: '24/01/2026',
+      time: '9:00',
+      venue: 'Tại gia',
+      address: 'Thôn Bình An, Xã Tam Anh, TP. Đà Nẵng'
     }
   }
 
