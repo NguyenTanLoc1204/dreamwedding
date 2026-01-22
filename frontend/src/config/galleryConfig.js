@@ -9,7 +9,7 @@ export const galleryConfig = {
   'engagement': {
     label: 'Lễ ăn hỏi',
     folder: '/images/gallery/engagement',
-    count: 0, // engagement1.jpg -> engagement8.jpg
+    count: 48, // engagement1.jpg -> engagement8.jpg
     prefix: 'engagement'
   },
   'ceremony': {
