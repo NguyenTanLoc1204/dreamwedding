@@ -1,76 +1,79 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { sampleBlogPosts } from '../config/blogConfig'
-import { formatDate } from '../utils/dateUtils'
 import './Blog.css'
 
-export default function Blog() {
-  const [posts, setPosts] = useState([])
+// DỮ LIỆU MẪU (Thay link YouTube của bạn vào đây)
+const sampleVideos = [
+  {
+    _id: 1,
+    title: "",
+    // Link YouTube dạng Embed.
+    // Lưu ý đuôi ?rel=0 để khi hết video nó không gợi ý video lung tung của người khác
+    embedUrl: "https://www.youtube.com/embed/06-XXOTP3Gc?rel=0", 
+    publishedAt: "2026-1-24",
+    description: "Đây không chỉ là một đoạn video,mà là những lời tâm sự em gửi anh — ghi lại hành trình yêu thương của chúng mình, từ những ngày xa cách, những lần chờ đợi, đến khoảnh khắc hôm nay khi em và anh cùng đứng cạnh nhau trong ngày trọng đại. Mỗi khung hình là một kỷ niệm, mỗi giây phút là một điều em muốn nói: cảm ơn anh đã ở lại, đã kiên nhẫn, đã cùng em đi qua tất cả để có “chúng ta” của hôm nay.",
+    author: "From the Bride, to the Groom"
+  }
+]
+
+const formatDate = (dateString) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(dateString).toLocaleDateString('en-US', options);
+}
+
+export default function VideoGallery() {
+  const [videos, setVideos] = useState([])
 
   useEffect(() => {
-    // Mặc định sắp xếp: Mới nhất lên đầu
-    const sortedPosts = [...sampleBlogPosts].sort((a, b) => 
-      new Date(b.publishedAt) - new Date(a.publishedAt)
-    )
-    setPosts(sortedPosts)
+    setVideos(sampleVideos)
   }, [])
 
   return (
     <div className="blog-page">
-      {/* Hero Section - Giữ nguyên nội dung text theo yêu cầu */}
       <section className="blog-hero section">
         <div className="container">
           <div className="section-title">
-            <p className="subtitle">Our Stories</p>
-            <h2>Wedding Blog</h2>
+            <p className="subtitle">Memorable Moments</p>
+            <h2>Wedding Films</h2>
             <div className="divider"></div>
           </div>
         </div>
       </section>
 
-      {/* Blog List - Style Classic */}
       <section className="blog-list section">
         <div className="container blog-container-classic">
           <div className="blog-stream">
-            {posts.map(post => (
-              <article key={post._id} className="blog-classic-item">
+            {videos.map(video => (
+              <article key={video._id} className="blog-classic-item">
                 
-                {/* 1. Image */}
-                <div className="blog-media">
-                  <Link to={`/blog/${post.slug}`}>
-                    <img src={post.imageUrl} alt={post.title} loading="lazy" />
-                  </Link>
+                {/* KHUNG CHỨA VIDEO YOUTUBE (Responsive) */}
+                <div className="blog-media video-responsive">
+                  <iframe 
+                    src={video.embedUrl} 
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                  ></iframe>
                 </div>
 
-                {/* 2. Content Body (Centered) */}
+                {/* NỘI DUNG CHỮ */}
                 <div className="blog-body">
-                  {/* Date */}
                   <div className="blog-date">
-                    {formatDate(post.publishedAt)}
+                    {formatDate(video.publishedAt)}
                   </div>
 
-                  {/* Title */}
                   <h3 className="blog-title">
-                    <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                    {video.title}
                   </h3>
 
-                  {/* Meta */}
                   <div className="blog-meta-info">
-                    <span>By {post.author}</span>
+                    <span> {video.author}</span>
                     <span className="sep">/</span>
-                    <span>Wedding Stories</span>
+                    {/* <span>Video Diary</span> */}
                   </div>
 
-                  {/* Excerpt */}
-                  <p className="blog-excerpt">{post.excerpt}</p>
-
-                  {/* Button */}
-                  {/* <Link to={`/blog/${post.slug}`} className="btn-read-more">
-                    Đọc Tiếp
-                  </Link> */}
+                  <p className="blog-excerpt">{video.description}</p>
                 </div>
 
-                {/* Decorative Divider between posts */}
                 <div className="blog-divider-bottom">
                   <span className="icon-leaf">❦</span>
                 </div>
@@ -78,6 +81,15 @@ export default function Blog() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="love-quote section">
+        <div className="container">
+          <blockquote>
+            "Forever is not a word, it’s a promise we choose every day.”"
+            <footer>— NguyenTanLoc</footer>
+          </blockquote>
         </div>
       </section>
     </div>
