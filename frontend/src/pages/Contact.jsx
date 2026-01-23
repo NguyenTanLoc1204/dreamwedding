@@ -43,7 +43,7 @@ export default function Contact() {
                   <span className="icon">📍</span>
                   <div>
                     <h4>Địa chỉ</h4>
-                    <p>Khách sạn Sofitel Saigon Plaza<br/>17 Lê Duẩn, Q1, TP.HCM</p>
+                    <p>Nhà Trai<br/>Thôn Bình An, Xã Tam Anh, TP. Đà Nẵng</p>
                   </div>
                 </div>
               </div>

@@ -24,3 +24,58 @@
     left: 30px;
   }
 }
+
+.love-quote {
+  background: var(--gradient-dreamy); /* Đảm bảo biến màu này đã được định nghĩa trong global css */
+  color: var(--text-dark);
+  padding: 90px 20px;
+  position: relative;
+  overflow: hidden; /* Thêm cái này để tránh trái tim bị tràn ra ngoài nếu màn hình nhỏ */
+}
+
+/* Trái tim mờ bên trái trên */
+.love-quote::before {
+  content: '💕';
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  font-size: 6rem;
+  opacity: 0.1;
+}
+
+/* Trái tim mờ bên phải dưới */
+.love-quote::after {
+  content: '💕';
+  position: absolute;
+  bottom: 30px;
+  right: 5%;
+  font-size: 6rem;
+  opacity: 0.1;
+}
+
+.love-quote blockquote {
+  color: #000;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 1.9;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.love-quote footer {
+  margin-top: 35px;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--primary-pink); /* Đảm bảo biến màu này đã có */
+}
+
+@media (max-width: 768px) {
+  .love-quote blockquote {
+    font-size: 1.5rem;
+  }
+}

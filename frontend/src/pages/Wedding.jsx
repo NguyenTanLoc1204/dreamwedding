@@ -6,7 +6,7 @@ export default function Wedding() {
       title: 'Lễ Đính Hôn',
       date: '17/01/2026',
       time: '9:00',
-      venue: 'Tại gia',
+      venue: 'Nhà Gái',
       address: '1051 Hùng Vương, Quy Nhơn Bắc, Gia Lai',
       map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.280542630509!2d108.5875447!3d15.4531394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3169c5000ec26bbf%3A0x5014de4179b24a2f!2zTmjDoCB24INuIGjDs2EgdGjDtG4gQsOsbmggQW4!5e0!3m2!1svi!2s!4v1737350000000'
     },
@@ -14,7 +14,7 @@ export default function Wedding() {
       title: 'Lễ Cưới',
       date: '24/01/2026',
       time: '9:00',
-      venue: 'Tại gia',
+      venue: 'Nhà Trai',
       address: 'Thôn Bình An, Xã Tam Anh, TP. Đà Nẵng'
     }
   }
