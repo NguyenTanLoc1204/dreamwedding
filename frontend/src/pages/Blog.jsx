@@ -8,7 +8,7 @@ const sampleVideos = [
     title: "",
     // Link YouTube dạng Embed.
     // Lưu ý đuôi ?rel=0 để khi hết video nó không gợi ý video lung tung của người khác
-    embedUrl: "https://www.youtube.com/embed/06-XXOTP3Gc?rel=0", 
+    embedUrl: "https://www.youtube.com/embed/K8HhRWgRci0?rel=0", 
     publishedAt: "2026-1-24",
     description: "Đây không chỉ là một đoạn video,mà là những lời tâm sự em gửi anh — ghi lại hành trình yêu thương của chúng mình, từ những ngày xa cách, những lần chờ đợi, đến khoảnh khắc hôm nay khi em và anh cùng đứng cạnh nhau trong ngày trọng đại. Mỗi khung hình là một kỷ niệm, mỗi giây phút là một điều em muốn nói: cảm ơn anh đã ở lại, đã kiên nhẫn, đã cùng em đi qua tất cả để có “chúng ta” của hôm nay.",
     author: "From the Bride, to the Groom"
