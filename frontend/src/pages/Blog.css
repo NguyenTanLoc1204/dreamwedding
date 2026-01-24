@@ -10,7 +10,7 @@
 /* --- QUAN TRỌNG: KỸ THUẬT RESPONSIVE CHO IFRAME YOUTUBE --- */
 .blog-media {
   width: 100%;
-  max-width: 900px;
+  max-width: 1400px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Bóng đổ đẹp hơn */
   border-radius: 4px;
   overflow: hidden;
